@@ -77,6 +77,10 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
         return modelDatabase.size();
     }
 
+    public interface HistoryAdapterCallback {
+        void onDelete(ModelDatabase modelLaundry);
+    }
+
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         public TextView tvKategori, tvNama, tvDate, tvLokasi;
